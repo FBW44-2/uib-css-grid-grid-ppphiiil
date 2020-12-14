@@ -1,0 +1,51 @@
+$device-size: (
+
+  "m": 500px,
+  "lg": 800px,
+);
+$i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 5px;
+}
+
+.col {
+  padding: 5px;
+  margin-top: 5px;
+  background-color: aquamarine;
+}
+
+@for $i from 1 to 13 {
+  .col-#{$i} {
+    grid-column: span $i;
+  }
+}
+
+//========== MEDIA BREAKPOINT
+@mixin device($size) {
+  @media (min-width: map-get($device-size , $size )) {
+    @content;
+  }
+}
+
+//========== DEVICE M
+@for $i from 1 to 13 {
+  .col-m-#{$i} {
+    @include device("m") {
+      grid-column: span $i;
+    }
+  }
+}
+
+//========== DEVICE L
+@for $i from 1 to 13 {
+    .col-lg-#{$i} {
+      @include device("lg") {
+        grid-column: span $i;
+      }
+    }
+  }
+
