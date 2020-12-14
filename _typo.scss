@@ -1,0 +1,47 @@
+h1 {
+  /* Hero */
+
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  margin-top: 40px;
+  /* or 117% */
+
+  letter-spacing: -1px;
+}
+
+.heading-facts {
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: $black;
+  opacity: 0.5;
+}
+
+p {
+  margin-top: 42px;
+  /* Paragrapgh */
+
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  /* Black */
+
+  color: $black;
+  opacity: 0.7;
+}
