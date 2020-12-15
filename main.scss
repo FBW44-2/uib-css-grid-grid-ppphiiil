@@ -1,17 +1,13 @@
+@import "mixin";
 @import "config";
 @import "reset";
 @import "typo";
 
-$device-size: (
-  "m": 500px,
-  "lg": 800px,
-);
 $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 
 .container {
   max-width: 1110px;
   margin: 0 auto;
- 
 }
 
 .row {
@@ -26,13 +22,6 @@ $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 @for $i from 1 to 13 {
   .col-#{$i} {
     grid-column: span $i;
-  }
-}
-
-//========== MEDIA BREAKPOINT
-@mixin device($size) {
-  @media (min-width: map-get($device-size , $size )) {
-    @content;
   }
 }
 
@@ -60,12 +49,9 @@ $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 //   background-color: gray;
 // }
 
-
-
 section {
-  padding-top: 50px;
+  margin-top: 128px;
 }
-
 header {
   padding-top: 50px;
 }
@@ -73,10 +59,9 @@ header {
 .hero {
   &__image {
     margin-top: 86px;
-    width:100%;
+    width: 100%;
   }
 }
-
 
 //==========NAVIGATION
 
@@ -107,6 +92,42 @@ header {
   justify-content: space-between;
 }
 
+//==========MENUE
+
+.menue {
+
+ margin:0 auto;
+
+  &__container {
+    min-width: 400px;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+  }
+
+  p {
+    margin: 0;
+    padding: 10px;
+    
+  }
+
+  &--item {
+    text-decoration: none;
+    // padding: 12px;
+  }
+
+  &--pair {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 //==========BUTTONS
 
 .btn {
@@ -120,8 +141,6 @@ header {
   justify-content: right;
 }
 
-
-
 //========== USER
 
 .user {
@@ -133,10 +152,9 @@ header {
     justify-content: center;
   }
 
-  &__image{
-    width:60px;
-    height:60px;
-
+  &__image {
+    width: 60px;
+    height: 60px;
   }
 
   &--name {
@@ -150,10 +168,9 @@ header {
   margin-top: 128px;
 }
 
-
 //========== IMAGES & ICONS
-.section-image{
-  width:100%;
+.section-image {
+  width: 100%;
 }
 
 .social-icons {
@@ -162,7 +179,6 @@ header {
   justify-content: flex-end;
   align-items: flex-end;
 }
-
 
 //========== HELPERS
 .pos-center {
@@ -173,3 +189,6 @@ header {
   text-align: right;
 }
 
+.m-128 {
+  margin-top: 128px;
+}

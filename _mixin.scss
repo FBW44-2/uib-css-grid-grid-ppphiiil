@@ -1,0 +1,24 @@
+
+//========== MEDIA BREAKPOINT
+
+$device-size: (
+  "m": 500px,
+  "lg": 800px,
+);
+
+@mixin device($size) {
+  @media (min-width: map-get($device-size , $size )) {
+    @content;
+  }
+}
+
+@mixin padding-mobile{
+  padding: 20px;
+  @include device('m'){
+   padding: 0px;
+  }
+ 
+  @include device ('lg'){
+   padding: 0px;
+  }
+}
