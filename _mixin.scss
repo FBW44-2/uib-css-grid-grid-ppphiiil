@@ -12,13 +12,13 @@ $device-size: (
   }
 }
 
-@mixin padding-mobile{
-  padding: 20px;
-  @include device('m'){
-   padding: 0px;
+@mixin padding-for-devices{
+    padding:20px;
+  @media (min-width: map-get($device-size , 'm' )){
+    padding:0;
+    
   }
- 
-  @include device ('lg'){
-   padding: 0px;
+  @media (min-width: map-get($device-size , 'lg' )){
+    padding:0;
   }
 }

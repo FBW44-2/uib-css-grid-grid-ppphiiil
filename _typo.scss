@@ -3,7 +3,7 @@
 h1 {
   /* Hero */
  
-  @include padding-mobile;
+
   font-family: Fira Sans;
   font-style: normal;
   font-weight: bold;
@@ -12,14 +12,16 @@ h1 {
   margin-top: 40px;
   /* or 117% */
 
-  padding: 20px;
+
 
   letter-spacing: -1px;
+  @include padding-for-devices;
+
 }
 
 .heading-facts {
    
-  @include padding-mobile;
+
   margin-bottom: 30px;
 
   font-family: Fira Sans;
@@ -36,6 +38,8 @@ h1 {
 
   color: $black;
   opacity: 0.5;
+  @include padding-for-devices;
+
 }
 
 .opacity05{
@@ -46,7 +50,7 @@ opacity: 0.5;
 
 p {
    
-  @include padding-mobile;
+
   margin-top: 42px;
   /* Paragrapgh */
 
@@ -62,6 +66,7 @@ p {
 
   color: $black;
   opacity: 0.7;
+  @include padding-for-devices;
 
 
 }
@@ -84,6 +89,8 @@ h2 {
   /* Black */
 
   color: $black;
+
+  @include padding-for-devices;
 
 }
 
