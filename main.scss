@@ -11,12 +11,12 @@ $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 .container {
   max-width: 1110px;
   margin: 0 auto;
+ 
 }
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
   gap: 20px;
 }
 
@@ -60,6 +60,24 @@ $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 //   background-color: gray;
 // }
 
+
+
+section {
+  padding-top: 50px;
+}
+
+header {
+  padding-top: 50px;
+}
+
+.hero {
+  &__image {
+    margin-top: 86px;
+    width:100%;
+  }
+}
+
+
 //==========NAVIGATION
 
 .nav {
@@ -83,6 +101,14 @@ $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   }
 }
 
+.subnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+//==========BUTTONS
+
 .btn {
   background-color: $blue;
   color: #fff;
@@ -94,40 +120,7 @@ $i: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   justify-content: right;
 }
 
-.subnav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-section {
-  padding-top: 50px;
-}
-
-header {
-  padding-top: 50px;
-}
-
-.pos-center {
-  text-align: center;
-}
-
-.pos-right {
-  text-align: right;
-}
-
-.social-icons {
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.hero {
-  & .image {
-    margin-top: 86px;
-  }
-}
 
 //========== USER
 
@@ -140,12 +133,43 @@ header {
     justify-content: center;
   }
 
+  &__image{
+    width:60px;
+    height:60px;
+
+  }
+
   &--name {
     font-weight: 700;
     padding-bottom: 6px;
   }
 }
 
+//========== ABOUT
 .about {
   margin-top: 128px;
 }
+
+
+//========== IMAGES & ICONS
+.section-image{
+  width:100%;
+}
+
+.social-icons {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+//========== HELPERS
+.pos-center {
+  text-align: center;
+}
+
+.pos-right {
+  text-align: right;
+}
+
